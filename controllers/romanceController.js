@@ -1,4 +1,4 @@
-const mongodb = require('../data/database');
+const mongodb = require('../data/database.js');
 const { ObjectId } = require('mongodb');
 
 const getAll = async (req, res) => {
@@ -6,7 +6,7 @@ const getAll = async (req, res) => {
     //#swagger.tags = ['Romance']
     const romance = await mongodb
       .getDatabase()
-      .collection('Romance')
+      .collection('romance')
       .find()
       .toArray();
 
@@ -41,7 +41,7 @@ const getSingle = async (req, res) => {
   }
 };
 
-const createromance = async (req, res) => {
+const createRomance = async (req, res) => {
   //#swagger.tags = ['Romance']
   const romance = {
     title: req.body.title,
@@ -75,7 +75,7 @@ const createromance = async (req, res) => {
   }
 };
 
-const updateromance = async (req, res) => {
+const updateRomance = async (req, res) => {
   //#swagger.tags = ['Romance']
   if (!ObjectId.isValid(req.params.id)) {
     return res
@@ -112,7 +112,7 @@ const updateromance = async (req, res) => {
   }
 };
 
-const deleteromance = async (req, res) => {
+const deleteRomance = async (req, res) => {
   //#swagger.tags = ['Romance']
   if (!ObjectId.isValid(req.params.id)) {
     return res

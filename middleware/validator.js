@@ -1,8 +1,7 @@
-// middleware/validateCoastalHikesAndromances.js
 const validator = require('../helpers/validate');
 
-// Romance validation
-const saveRomance = (req, res, next) => {
+// Novels validation
+const saveValidator = (req, res, next) => {
   const validationRule = {
     title: 'required|string',
     author: 'required|string',
@@ -29,8 +28,5 @@ const saveRomance = (req, res, next) => {
  
 
 module.exports = {
-  saveAutobiography,
-  saveFantasy,
-  saveMystery,
-  saveRomance
+  saveValidator
 };
