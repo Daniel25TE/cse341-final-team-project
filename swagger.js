@@ -6,8 +6,8 @@ const doc = {
         description: 'API for book inventory management across four collections: Romance, Mystery, Fantasy, and Autobiography. Allows full CRUD for Admins and read-only access for Users.'
     },
     
-    host: 'localhost:3004', 
-    schemes: ['http', 'https'],
+    host: 'cse341-final-team-project.onrender.com', 
+    schemes: ['https'],
     consumes: ['application/json'],
     produces: ['application/json'],
 };
