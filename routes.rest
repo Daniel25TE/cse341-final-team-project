@@ -8,7 +8,7 @@ http://localhost:3004/fantasy
 GET http://localhost:3004/fantasy/6924deefe52cffafccf365d1
 
 ### create a novel ###
-POST http://localhost:3004/fantasy
+POST http://localhost:3004/romance
 content-type: application/json
 
 {
