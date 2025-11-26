@@ -8,16 +8,16 @@ http://localhost:3004/fantasy
 GET http://localhost:3004/fantasy/6924deefe52cffafccf365d1
 
 ### create a novel ###
-POST http://localhost:3004/fantasy
+POST http://localhost:3004/romance
 content-type: application/json
 
 {
-    "title": "Test",
-    "author": "Tester",
-    "publishDate": "10/12/2001",
-    "publisher": "Test World",
-    "price": "10",
-    "bio": "Test Test Test",
+    "title": "The Wedding Date",
+    "author": "Jasmine Guillory",
+    "publishDate": "2018-01-30",
+    "publisher": "Berkley",
+    "price": 18,
+    "bio": "A charming interracial romance sparked when two strangers pretend to be a couple at a wedding.",
     "status": true
 }
 
