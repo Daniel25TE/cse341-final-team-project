@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "swagger": "node swagger.js"
   },
   "repository": {
     "type": "git",
@@ -19,10 +20,15 @@
   },
   "homepage": "https://github.com/Daniel25TE/cse341-final-team-project#readme",
   "dependencies": {
+    "body-parser": "^2.2.1",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "express-ejs-layouts": "^2.5.1",
     "mongodb": "^7.0.0",
+    "nodemon": "^3.1.11",
+    "swagger": "^0.7.5",
+    "swagger-autogen": "^2.23.7",
+    "swagger-ui-express": "^5.0.1",
     "validatorjs": "^3.22.1"
   }
 }
