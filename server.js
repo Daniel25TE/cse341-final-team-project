@@ -6,9 +6,6 @@ const app = express();
 
 const port = process.env.PORT || 3004;
 
-const swaggerUi = require('swagger-ui-express');
-const swaggerDocument = require('./swagger-output.json');
-
   app.use(bodyParser.json());
   app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin','*');
@@ -19,8 +16,6 @@ const swaggerDocument = require('./swagger-output.json');
   res.setHeader('Access-Control-Allow-Methods','GET, POST, PUT, DELETE, OPTIONS');
   next();
 });
-
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.use('/', require('./routes/index'));
 
