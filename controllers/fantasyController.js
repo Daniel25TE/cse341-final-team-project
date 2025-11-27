@@ -2,6 +2,7 @@ const mongodb = require('../data/database.js');
 const { ObjectId } = require('mongodb');
 
 const getAll = async (req, res) => {
+  //#swagger.tags = ['Fantasy']
   try {
     const fantasy = await mongodb
       .getDatabase()
@@ -16,6 +17,7 @@ const getAll = async (req, res) => {
 };
 
 const getSingle = async (req, res) => {
+  //#swagger.tags = ['Fantasy']
   if (!ObjectId.isValid(req.params.id)) {
     return res
       .status(400)
@@ -40,6 +42,7 @@ const getSingle = async (req, res) => {
 };
 
 const createFantasy = async (req, res) => {
+  //#swagger.tags = ['Fantasy']
   const fantasy = {
     title: req.body.title,
     author: req.body.author,
@@ -72,6 +75,7 @@ const createFantasy = async (req, res) => {
 };
 
 const updateFantasy = async (req, res) => {
+  //#swagger.tags = ['Fantasy']
   if (!ObjectId.isValid(req.params.id)) {
     return res
       .status(400)
@@ -108,6 +112,7 @@ const updateFantasy = async (req, res) => {
 };
 
 const deleteFantasy = async (req, res) => {
+  //#swagger.tags = ['Fantasy']
   if (!ObjectId.isValid(req.params.id)) {
     return res
       .status(400)

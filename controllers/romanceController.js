@@ -28,7 +28,7 @@ const getSingle = async (req, res) => {
   try {
     const romance = await mongodb
       .getDatabase()
-      .collection('Romance')
+      .collection('romance')
       .findOne({ _id: romanceId });
 
     if (!romance) {

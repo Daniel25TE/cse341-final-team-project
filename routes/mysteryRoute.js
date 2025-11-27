@@ -1,0 +1,17 @@
+const express = require('express');
+const router = express.Router();
+
+const mysteryController = require('../controllers/mysteryController');
+const validation = require('../middleware/validator');
+
+router.get('/', mysteryController.getAllMystery);
+
+router.get('/:id', mysteryController.getSingleMystery);
+
+router.post('/', validation.saveValidator, mysteryController.createMystery);
+
+router.put('/:id', validation.saveValidator, mysteryController.updateMystery);
+
+router.delete('/:id', mysteryController.deleteMystery);
+
+module.exports = router;

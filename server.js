@@ -32,7 +32,9 @@ mongodb.initDb((err) => {
   if (err) {
     console.log(err);
   } else {
-    app.listen(port, () => {
-      console.log('Web Server is listening at port ' + (process.env.PORT || 3004))})
+    const PORT = process.env.PORT || 3004;
+    app.listen(PORT, () => {
+      console.log('Web Server is listening at port ' + PORT);
+    });
   }
 });
