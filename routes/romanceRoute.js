@@ -3,15 +3,16 @@ const router = express.Router();
 
 const romanceController = require('../controllers/romanceController');
 const validation = require('../middleware/validator');
+const { isAuthenticated } = require('../middleware/authenticate');
 
 router.get('/', romanceController.getAll);
 
 router.get('/:id', romanceController.getSingle);
 
-router.post('/', validation.saveValidator, romanceController.createRomance);
+router.post('/', isAuthenticated, validation.saveValidator, romanceController.createRomance);
 
-router.put('/:id', validation.saveValidator, romanceController.updateRomance);
+router.put('/:id', isAuthenticated, validation.saveValidator, romanceController.updateRomance);
 
-router.delete('/:id', romanceController.deleteRomance);
+router.delete('/:id', isAuthenticated, romanceController.deleteRomance);
 
 module.exports = router;

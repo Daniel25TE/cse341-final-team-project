@@ -8,10 +8,10 @@ router.get('/', mysteryController.getAllMystery);
 
 router.get('/:id', mysteryController.getSingleMystery);
 
-router.post('/', validation.saveValidator, mysteryController.createMystery);
+router.post('/', isAuthenticated, validation.saveValidator, mysteryController.createMystery);
 
-router.put('/:id', validation.saveValidator, mysteryController.updateMystery);
+router.put('/:id', isAuthenticated, validation.saveValidator, mysteryController.updateMystery);
 
-router.delete('/:id', mysteryController.deleteMystery);
+router.delete('/:id', isAuthenticated, mysteryController.deleteMystery);
 
 module.exports = router;
