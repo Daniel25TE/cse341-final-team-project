@@ -5,13 +5,17 @@ const passport = require('passport');
 const session = require('express-session');
 const cors = require('cors');
 
+const app = express();
 dotenv.config();
 
-const app = express();
+app.use(cors({
+  origin: process.env.CLIENT_URL || 'http://localhost:3004',
+  credentials: true
+}));
+
 const PORT = process.env.PORT || 3004;
 
 app.use(express.json());
-app.use(cors());
 
 app.use(
   session({
@@ -21,6 +25,7 @@ app.use(
     cookie: {
       secure: process.env.NODE_ENV === 'production',
       httpOnly: true,
+      sameSite: 'none',
     },
   })
 );
