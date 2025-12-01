@@ -13,6 +13,6 @@ router.post('/', isAuthenticated, validation.saveValidator, fantasyController.cr
 
 router.put('/:id', isAuthenticated, validation.saveValidator, fantasyController.updateFantasy);
 
-router.delete('/:id', isAuthenticated. fantasyController.deleteFantasy);
+router.delete('/:id', isAuthenticated, fantasyController.deleteFantasy);
 
 module.exports = router;
