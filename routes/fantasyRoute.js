@@ -3,7 +3,7 @@ const router = express.Router();
 
 const fantasyController = require('../controllers/fantasyController');
 const validation = require('../middleware/validator');
-const { isAuthenticated } = require('../middleware/authenticate');
+const isAuthenticated = require('../middleware/authenticate');
 
 router.get('/', fantasyController.getAll);
 

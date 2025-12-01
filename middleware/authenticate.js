@@ -1,8 +1,9 @@
 const isAuthenticated = (req, res, next) => {
-    if (!req.isAuthenticated || !req.isAuthenticated()) {
-      return res.status(401).json('You do not have access.');
-    }
-    next();
-  };
-  
-module.exports = { isAuthenticated }
+  if (req.isAuthenticated && req.isAuthenticated()) {
+    return next();
+  }
+
+  return res.status(401).json({ message: "You are not authenticated, please authenticate" });
+};
+
+module.exports = isAuthenticated;

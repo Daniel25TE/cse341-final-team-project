@@ -3,7 +3,7 @@ const router = express.Router();
 
 const romanceController = require('../controllers/romanceController');
 const validation = require('../middleware/validator');
-const { isAuthenticated } = require('../middleware/authenticate');
+const isAuthenticated = require('../middleware/authenticate');
 
 router.get('/', romanceController.getAll);
 
