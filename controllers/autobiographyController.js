@@ -2,7 +2,10 @@ const mongodb = require('../data/database.js');
 const { ObjectId } = require('mongodb');
 
 const getAll = async (req, res) => {
-  //#swagger.tags = ['Autobiography']
+    //#swagger.tags = ['Autobiography']
+    //#swagger.summary = 'Get all autobiography books'
+    //#swagger.description = 'Returns a list of all autobiography books stored in the database.'
+
   try {
     const Autobiography = await mongodb
       .getDatabase()
@@ -17,7 +20,11 @@ const getAll = async (req, res) => {
 };
 
 const getSingle = async (req, res) => {
-  //#swagger.tags = ['Autobiography']
+    //#swagger.tags = ['Autobiography']
+    //#swagger.summary = 'Get a single autobiography book by ID'
+    //#swagger.description = 'Finds and returns an autobiography book using its MongoDB ObjectId.'
+    //#swagger.parameters['id'] = { description: 'Autobiography book ID' }
+
   if (!ObjectId.isValid(req.params.id)) {
     return res
       .status(400)
@@ -42,7 +49,22 @@ const getSingle = async (req, res) => {
 };
 
 const createAutobiography = async (req, res) => {
-  //#swagger.tags = ['Autobiography']
+    //#swagger.tags = ['Autobiography']
+    //#swagger.summary = 'Create a new autobiography book'
+    //#swagger.description = 'Creates a new autobiography book using the data provided in the request body.'
+    //#swagger.parameters['Autobiography'] = {
+    //    in: 'body',
+    //    description: 'Autobiography book data',
+    //    schema: {
+    //        title: 'Example Title',
+    //        author: 'Example Author',
+    //        publishDate: '2024-01-01',
+    //        publisher: 'Example Publisher',
+    //        price: 19.99,
+    //        bio: 'Short description of the book',
+    //        status: 'Available'
+    //    }
+    //}
   const Autobiography = {
     title: req.body.title,
     author: req.body.author,
@@ -75,7 +97,24 @@ const createAutobiography = async (req, res) => {
 };
 
 const updateAutobiography = async (req, res) => {
-  //#swagger.tags = ['Autobiography']
+    //#swagger.tags = ['Autobiography']
+    //#swagger.summary = 'Update an existing autobiography book'
+    //#swagger.description = 'Updates an existing autobiography book by replacing all fields with the new data.'
+    //#swagger.parameters['id'] = { description: 'Autobiography book ID to update' }
+    //#swagger.parameters['Autobiography'] = {
+    //    in: 'body',
+    //    description: 'Updated autobiography book data',
+    //    schema: {
+    //        title: 'Updated Title',
+    //        author: 'Updated Author',
+    //        publishDate: '2024-01-01',
+    //        publisher: 'Updated Publisher',
+    //        price: 29.99,
+    //        bio: 'Updated biography text',
+    //        status: 'Checked Out'
+    //    }
+    //}
+
   if (!ObjectId.isValid(req.params.id)) {
     return res
       .status(400)
@@ -112,7 +151,11 @@ const updateAutobiography = async (req, res) => {
 };
 
 const deleteAutobiography = async (req, res) => {
-  //#swagger.tags = ['Autobiography']
+    //#swagger.tags = ['Autobiography']
+    //#swagger.summary = 'Delete an autobiography book'
+    //#swagger.description = 'Deletes an autobiography book using its MongoDB ObjectId.'
+    //#swagger.parameters['id'] = { description: 'ID of the autobiography book to delete' }
+
   if (!ObjectId.isValid(req.params.id)) {
     return res
       .status(400)
