@@ -16,7 +16,7 @@ app.use(cors({
 const PORT = process.env.PORT || 3004;
 
 app.use(express.json());
-
+app.set('trust proxy', 1);
 app.use(
   session({
     secret: process.env.SESSION_SECRET,
