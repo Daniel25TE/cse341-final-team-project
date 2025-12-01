@@ -1,5 +1,5 @@
 const express = require('express');
-const bodyParser = require('body-parser');
+const dotenv = require('dotenv');
 const mongodb = require('./data/database.js');
 const passport = require('passport');
 const session = require('express-session');
@@ -8,19 +8,10 @@ const cors = require('cors');
 dotenv.config();
 
 const app = express();
+const PORT = process.env.PORT || 3004;
 
-const port = process.env.PORT || 3004;
-
-  app.use(bodyParser.json());
-  app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin','*');
-  res.setHeader(
-    'Access-Control-Allow-Headers',
-    'Origin, X-Requested-With, Content-Type, Accept, z-key'
-);
-  res.setHeader('Access-Control-Allow-Methods','GET, POST, PUT, DELETE, OPTIONS');
-  next();
-})
+app.use(express.json());
+app.use(cors());
 
 app.use(
   session({
@@ -44,18 +35,16 @@ app.get('/', (req, res) => {
   res.send('If you see this message, the server is running.');
 });
 
-
 process.on('uncaughtException', (err, origin) => {
-  console.log(process.stderr.fd, 'Caught exception: ${err}\n' + 'Exception origin: ${origin}');
+  console.error(`Caught exception: ${err}\nException origin: ${origin}`);
 });
 
 mongodb.initDb((err) => {
   if (err) {
-    console.log(err);
+    console.error(err);
   } else {
-    const PORT = process.env.PORT || 3004;
     app.listen(PORT, () => {
-      console.log('Web Server is listening at port ' + PORT);
+      console.log(`Web Server is listening at port ${PORT}`);
     });
   }
 });
