@@ -3,6 +3,7 @@ const router = express.Router();
 
 const mysteryController = require('../controllers/mysteryController');
 const validation = require('../middleware/validator');
+const { isAuthenticated } = require('../middleware/authenticate');
 
 router.get('/', mysteryController.getAllMystery);
 
