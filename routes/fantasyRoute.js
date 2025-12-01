@@ -6,13 +6,13 @@ const validation = require('../middleware/validator');
 const isAuthenticated = require('../middleware/authenticate');
 const authorize = require('../middleware/authorize');
 
-router.get('/', isAuthenticated, authorize('customer'), fantasyController.getAll);
+router.get('/', fantasyController.getAll);
 
-router.get('/:id', isAuthenticated, authorize('customer'), fantasyController.getSingle);
+router.get('/:id', fantasyController.getSingle);
 
-router.post('/', isAuthenticated, authorize('admin'), validation.saveValidator, fantasyController.createFantasy);
+router.post('/', isAuthenticated, authorize('customer'), validation.saveValidator, fantasyController.createFantasy);
 
-router.put('/:id', isAuthenticated, authorize('admin'), validation.saveValidator, fantasyController.updateFantasy);
+router.put('/:id', isAuthenticated, authorize('customer'), validation.saveValidator, fantasyController.updateFantasy);
 
 router.delete('/:id', isAuthenticated, authorize('admin'), fantasyController.deleteFantasy);
 

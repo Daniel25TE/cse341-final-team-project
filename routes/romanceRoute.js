@@ -6,13 +6,13 @@ const validation = require('../middleware/validator');
 const isAuthenticated = require('../middleware/authenticate');
 const authorize = require('../middleware/authorize');
 
-router.get('/', isAuthenticated, authorize('customer'), romanceController.getAll);
+router.get('/', romanceController.getAll);
 
-router.get('/:id', isAuthenticated, authorize('customer'), romanceController.getSingle);
+router.get('/:id', romanceController.getSingle);
 
-router.post('/', isAuthenticated, authorize('admin'), validation.saveValidator, romanceController.createRomance);
+router.post('/', isAuthenticated, authorize('customer'), validation.saveValidator, romanceController.createRomance);
 
-router.put('/:id', isAuthenticated, authorize('admin'), validation.saveValidator, romanceController.updateRomance);
+router.put('/:id', isAuthenticated, authorize('customer'), validation.saveValidator, romanceController.updateRomance);
 
 router.delete('/:id', isAuthenticated, authorize('admin'), romanceController.deleteRomance);
 
