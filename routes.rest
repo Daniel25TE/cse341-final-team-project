@@ -37,3 +37,15 @@ content-type: application/json
 
 ### Delete an existing novel ###
 DELETE http://localhost:3004/fantasy/6924ddeae52cffafccf365d0
+
+### Get all the users from the Users collection ###
+GET https://cse341-final-team-project.onrender.com/users
+
+
+### Update role in the users collection ###
+PUT https://cse341-final-team-project.onrender.com/users/186435595/role
+Content-Type: application/json
+
+{
+  "role": "admin"
+}

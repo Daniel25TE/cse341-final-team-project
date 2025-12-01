@@ -7,6 +7,7 @@ router.use('/', require('./auth'));
 router.use('/fantasy', require('./fantasyRoute'));
 router.use('/mystery', require('./mysteryRoute'));
 router.use('/romance', require('./romanceRoute'));
+router.use('/users', require('./users'));
 
 router.use('/', require('./swagger'));
 
