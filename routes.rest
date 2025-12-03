@@ -105,16 +105,16 @@ Content-Type: application/json
 
 /// Mistery ///
 ###test local enviorenment server running ###
-GET http://localhost:3004/
+GET https://cse341-final-team-project.onrender.com/
 
 ### get all data ###
-http://localhost:3004/fantasy
+GET https://cse341-final-team-project.onrender.com/mistery
 
 ### Get the specific novel by Id ###
-GET http://localhost:3004/fantasy/6924deefe52cffafccf365d1
+GET https://cse341-final-team-project.onrender.com/mistery/6924deefe52cffafccf365d1
 
 ### create a novel ###
-POST http://localhost:3004/romance
+GET https://cse341-final-team-project.onrender.com/mistery
 content-type: application/json
 
 {
@@ -128,7 +128,7 @@ content-type: application/json
 }
 
 ### Update an existing novel ###
-PUT http://localhost:3004/fantasy/6924ddeae52cffafccf365d0
+GET https://cse341-final-team-project.onrender.com/mistery/6924ddeae52cffafccf365d0
 content-type: application/json
 
 {
@@ -142,7 +142,7 @@ content-type: application/json
 }
 
 ### Delete an existing novel ###
-DELETE http://localhost:3004/fantasy/6924ddeae52cffafccf365d0
+GET https://cse341-final-team-project.onrender.com/mistery/6924ddeae52cffafccf365d0
 
 ### Get all the users from the Users collection ###
 GET https://cse341-final-team-project.onrender.com/users
