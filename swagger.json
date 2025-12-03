@@ -19,6 +19,10 @@
   "paths": {
     "/logout": {
       "get": {
+        "tags": [
+          "OAuth"
+        ],
+        "summary": "Log out of your account",
         "description": "",
         "responses": {
           "default": {
@@ -29,6 +33,10 @@
     },
     "/profile": {
       "get": {
+        "tags": [
+          "OAuth"
+        ],
+        "summary": "Check if you are log in.",
         "description": "",
         "responses": {
           "200": {
@@ -43,8 +51,9 @@
     "/search/": {
       "get": {
         "tags": [
-          "Search"
+          "Stretch Challenges"
         ],
+        "summary": "Search by author/title/status in all four collections",
         "description": "",
         "parameters": [
           {
@@ -883,6 +892,10 @@
     },
     "/users/": {
       "get": {
+        "tags": [
+          "Stretch Challenges"
+        ],
+        "summary": "Get a list of all the people, with their roles, who have authenticated with OAuth",
         "description": "",
         "responses": {
           "200": {
@@ -896,6 +909,10 @@
     },
     "/users/{githubId}/role": {
       "put": {
+        "tags": [
+          "Stretch Challenges"
+        ],
+        "summary": "Update your role, customer/admin, with your githubId",
         "description": "",
         "parameters": [
           {

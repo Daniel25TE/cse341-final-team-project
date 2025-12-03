@@ -17,6 +17,8 @@ router.get(
 
 
 router.get('/logout', (req, res, next) => {
+  //#swagger.tags = ['OAuth']
+  //#swagger.summary = 'Log out of your account'
   req.logout(function (err) {
     if (err) return next(err);
     res.redirect('/');
@@ -24,6 +26,8 @@ router.get('/logout', (req, res, next) => {
 });
 
 router.get('/profile', (req, res) => {
+  //#swagger.tags = ['OAuth']
+  //#swagger.summary = 'Check if you are log in.'
   if (!req.isAuthenticated()) {
     return res.status(401).send('You are not logged in');
   }

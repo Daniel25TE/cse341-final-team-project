@@ -13,7 +13,8 @@ const parseStatusOption = (status) => {
 };
 
 const searchBooks = async (req, res) => {
-  //#swagger.tags = ['Search']
+    //#swagger.tags = ['Stretch Challenges']
+    //#swagger.summary = 'Search by author/title/status in all four collections'
   try {
     const { author, title, status } = req.query;
     const query = {};

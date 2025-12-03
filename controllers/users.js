@@ -1,6 +1,8 @@
 const { getDatabase } = require('../data/database');
 
 const getAllUsers = async (req, res) => {
+  //#swagger.tags = ['Stretch Challenges']
+  //#swagger.summary = 'Get a list of all the people, with their roles, who have authenticated with OAuth'
   try {
     const db = getDatabase();
     const usersCollection = db.collection('users');
@@ -13,6 +15,8 @@ const getAllUsers = async (req, res) => {
 };
 
 const updateUserRole = async (req, res) => {
+  //#swagger.tags = ['Stretch Challenges']
+  //#swagger.summary = 'Update your role, customer/admin, with your githubId'
   try {
     const db = getDatabase();
     const usersCollection = db.collection('users');
