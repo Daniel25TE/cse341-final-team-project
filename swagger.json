@@ -40,6 +40,39 @@
         }
       }
     },
+    "/search/": {
+      "get": {
+        "tags": [
+          "Search"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "author",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "title",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "status",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
     "/autobiography/": {
       "get": {
         "tags": [
@@ -893,39 +926,6 @@
           },
           "404": {
             "description": "Not Found"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
-      }
-    },
-    "/search/": {
-      "get": {
-        "tags": [
-          "Search"
-        ],
-        "description": "",
-        "parameters": [
-          {
-            "name": "author",
-            "in": "query",
-            "type": "string"
-          },
-          {
-            "name": "title",
-            "in": "query",
-            "type": "string"
-          },
-          {
-            "name": "status",
-            "in": "query",
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
           },
           "500": {
             "description": "Internal Server Error"
