@@ -1,14 +1,14 @@
 ###test local enviorenment server running ###
-GET http://localhost:3004/
+GET https://cse341-final-team-project.onrender.com/
 
 ### get all data ###
-http://localhost:3004/fantasy
+GET https://cse341-final-team-project.onrender.com/fantasy
 
 ### Get the specific novel by Id ###
-GET http://localhost:3004/fantasy/6924deefe52cffafccf365d1
+GET https://cse341-final-team-project.onrender.com/fantasy/69271b400485e9ce40e282f8
 
 ### create a novel ###
-POST http://localhost:3004/romance
+POST https://cse341-final-team-project.onrender.com/fantasy
 content-type: application/json
 
 {
@@ -22,7 +22,7 @@ content-type: application/json
 }
 
 ### Update an existing novel ###
-PUT http://localhost:3004/fantasy/6924ddeae52cffafccf365d0
+PUT https://cse341-final-team-project.onrender.com/fantasy/6924ddeae52cffafccf365d0
 content-type: application/json
 
 {
@@ -36,7 +36,7 @@ content-type: application/json
 }
 
 ### Delete an existing novel ###
-DELETE http://localhost:3004/fantasy/6924ddeae52cffafccf365d0
+DELETE https://cse341-final-team-project.onrender.com/fantasy/6924ddeae52cffafccf365d0
 
 ### Get all the users from the Users collection ###
 GET https://cse341-final-team-project.onrender.com/users
