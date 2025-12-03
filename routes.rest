@@ -1,0 +1,210 @@
+###test local enviorenment server running ###
+GET http://localhost:3004/
+
+### get all data ###
+http://localhost:3004/fantasy
+
+### Get the specific novel by Id ###
+GET http://localhost:3004/fantasy/6924deefe52cffafccf365d1
+
+### create a novel ###
+POST http://localhost:3004/romance
+content-type: application/json
+
+{
+    "title": "The Wedding Date",
+    "author": "Jasmine Guillory",
+    "publishDate": "2018-01-30",
+    "publisher": "Berkley",
+    "price": 18,
+    "bio": "A charming interracial romance sparked when two strangers pretend to be a couple at a wedding.",
+    "status": true
+}
+
+### Update an existing novel ###
+PUT http://localhost:3004/fantasy/6924ddeae52cffafccf365d0
+content-type: application/json
+
+{
+    "title": "Testeando",
+    "author": "Tester",
+    "publishDate": "10/12/2001",
+    "publisher": "Test World",
+    "price": "10",
+    "bio": "Test Test Test",
+    "status": true 
+}
+
+### Delete an existing novel ###
+DELETE http://localhost:3004/fantasy/6924ddeae52cffafccf365d0
+
+### Get all the users from the Users collection ###
+GET https://cse341-final-team-project.onrender.com/users
+
+
+### Update role in the users collection ###
+PUT https://cse341-final-team-project.onrender.com/users/186435595/role
+Content-Type: application/json
+
+{
+  "role": "admin"
+}
+
+/// Romance////
+###test local enviorenment server running ###
+GET https://cse341-final-team-project.onrender.com/
+
+### get all data ###
+https://cse341-final-team-project.onrender.com/romance
+
+### Get the specific novel by Id ###
+GET http://https://cse341-final-team-project.onrender.com/romance/6924deefe52cffafccf365d1
+
+### create a novel ###
+POST https://cse341-final-team-project.onrender.com/romance
+content-type: application/json
+
+{
+    "title": "The Wedding Date",
+    "author": "Jasmine Guillory",
+    "publishDate": "2018-01-30",
+    "publisher": "Berkley",
+    "price": 18,
+    "bio": "A charming interracial romance sparked when two strangers pretend to be a couple at a wedding.",
+    "status": true
+}
+
+### Update an existing novel ###
+PUT https://cse341-final-team-project.onrender.com/romance/6924ddeae52cffafccf365d0
+content-type: application/json
+
+{
+    "title": "Testeando",
+    "author": "Tester",
+    "publishDate": "10/12/2001",
+    "publisher": "Test World",
+    "price": "10",
+    "bio": "Test Test Test",
+    "status": true 
+}
+
+### Delete an existing novel ###
+DELETE https://cse341-final-team-project.onrender.com/romance/6924ddeae52cffafccf365d0
+
+### Get all the users from the Users collection ###
+GET https://cse341-final-team-project.onrender.com/users
+
+
+### Update role in the users collection ###
+PUT https://cse341-final-team-project.onrender.com/users/186435595/role
+Content-Type: application/json
+
+{
+  "role": "admin"
+}
+
+/// Mistery ///
+###test local enviorenment server running ###
+GET http://localhost:3004/
+
+### get all data ###
+http://localhost:3004/fantasy
+
+### Get the specific novel by Id ###
+GET http://localhost:3004/fantasy/6924deefe52cffafccf365d1
+
+### create a novel ###
+POST http://localhost:3004/romance
+content-type: application/json
+
+{
+    "title": "The Wedding Date",
+    "author": "Jasmine Guillory",
+    "publishDate": "2018-01-30",
+    "publisher": "Berkley",
+    "price": 18,
+    "bio": "A charming interracial romance sparked when two strangers pretend to be a couple at a wedding.",
+    "status": true
+}
+
+### Update an existing novel ###
+PUT http://localhost:3004/fantasy/6924ddeae52cffafccf365d0
+content-type: application/json
+
+{
+    "title": "Testeando",
+    "author": "Tester",
+    "publishDate": "10/12/2001",
+    "publisher": "Test World",
+    "price": "10",
+    "bio": "Test Test Test",
+    "status": true 
+}
+
+### Delete an existing novel ###
+DELETE http://localhost:3004/fantasy/6924ddeae52cffafccf365d0
+
+### Get all the users from the Users collection ###
+GET https://cse341-final-team-project.onrender.com/users
+
+
+### Update role in the users collection ###
+PUT https://cse341-final-team-project.onrender.com/users/186435595/role
+Content-Type: application/json
+
+{
+  "role": "admin"
+}
+
+/// authobiography ///
+###test local enviorenment server running ###
+GET http://localhost:3004/
+
+### get all data ###
+http://localhost:3004/fantasy
+
+### Get the specific novel by Id ###
+GET http://localhost:3004/fantasy/6924deefe52cffafccf365d1
+
+### create a novel ###
+POST http://localhost:3004/romance
+content-type: application/json
+
+{
+    "title": "The Wedding Date",
+    "author": "Jasmine Guillory",
+    "publishDate": "2018-01-30",
+    "publisher": "Berkley",
+    "price": 18,
+    "bio": "A charming interracial romance sparked when two strangers pretend to be a couple at a wedding.",
+    "status": true
+}
+
+### Update an existing novel ###
+PUT http://localhost:3004/fantasy/6924ddeae52cffafccf365d0
+content-type: application/json
+
+{
+    "title": "Testeando",
+    "author": "Tester",
+    "publishDate": "10/12/2001",
+    "publisher": "Test World",
+    "price": "10",
+    "bio": "Test Test Test",
+    "status": true 
+}
+
+### Delete an existing novel ###
+DELETE http://localhost:3004/fantasy/6924ddeae52cffafccf365d0
+
+### Get all the users from the Users collection ###
+GET https://cse341-final-team-project.onrender.com/users
+
+
+### Update role in the users collection ###
+PUT https://cse341-final-team-project.onrender.com/users/186435595/role
+Content-Type: application/json
+
+{
+  "role": "admin"
+}

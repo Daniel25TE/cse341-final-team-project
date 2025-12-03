@@ -1,0 +1,42 @@
+{
+  "name": "cse341-final-team-project",
+  "version": "1.0.0",
+  "description": "This is the final team project for the CSE341 class",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "swagger": "node swagger.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Daniel25TE/cse341-final-team-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Daniel25TE/cse341-final-team-project/issues"
+  },
+  "homepage": "https://github.com/Daniel25TE/cse341-final-team-project#readme",
+  "dependencies": {
+    "body-parser": "^2.2.1",
+    "connect-flash": "^0.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "express-ejs-layouts": "^2.5.1",
+    "express-session": "^1.18.2",
+    "mongodb": "^7.0.0",
+    "nodemon": "^3.1.11",
+    "passport": "^0.7.0",
+    "passport-github2": "^0.1.12",
+    "swagger": "^0.7.5",
+    "swagger-autogen": "^2.23.7",
+    "swagger-ui-express": "^5.0.1",
+    "validatorjs": "^3.22.1"
+  },
+  "devDependencies": {
+    "jest": "^30.2.0"
+  }
+}
